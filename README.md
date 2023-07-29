@@ -47,10 +47,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Add user]**
-- **[Create post]**
-- **[Add comment]**
-- **[Like post]**
+- **[Add Validation]**
+- **[Create Testing]**
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -86,7 +85,7 @@ Install this project with:
 
 To run the project execute the following command:
 
-- [N/A]
+- rspec spec
 
 ### Run tests
 
@@ -95,13 +94,6 @@ To run tests, run the following command:
 - `rubocop`
 - `rspec .`
 - `rails server`
-
-
-### Deployment
-
-You can deploy this project using:
-
-- [N/A]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
