@@ -16,30 +16,25 @@ RSpec.describe UsersController, type: :request do
       expect(response).to render_template(:show)
     end
 
-#     it 'includes correct placeholder text in the response body' do
-#         user = User.create(name: 'Lyn', photo: 'https://unsplash.com/photos/7fF0iei80AQ', bio: 'Teacher from England.', posts_counter: 0)
-#         get user_path(user.id)
-#         expect(response.body).to include("<h1>Here is the info about the user #{user.id}</h1>")
-#       end      
-#   end
+    describe 'GET #index' do
+      it 'returns a successful response' do
+        get users_path
+        expect(response).to have_http_status(:success)
+      end
 
-  describe 'GET #index' do
-    it 'returns a successful response' do
-      get users_path
-      expect(response).to have_http_status(:success)
-    end
+      it 'renders the index template' do
+        get users_path
+        expect(response).to render_template(:index)
+      end
 
-    it 'renders the index template' do
-      get users_path
-      expect(response).to render_template(:index)
-    end
-
-    it 'includes correct placeholder text in the response body' do
-        User.create(name: 'Lyn', photo: 'https://unsplash.com/photos/7fF0iei80AQ', bio: 'Teacher from England.', posts_counter: 0)
-        User.create(name: 'John Doe', photo: 'https://unsplash.com/photos/ABC123', bio: 'Lorem ipsum', posts_counter: 0)
+      it 'includes correct placeholder text in the response body' do
+        User.create(name: 'Lyn', photo: 'https://unsplash.com/photos/7fF0iei80AQ', bio: 'Teacher from England.',
+                    posts_counter: 0)
+        User.create(name: 'John Doe', photo: 'https://unsplash.com/photos/ABC123', bio: 'Lorem ipsum',
+                    posts_counter: 0)
         get users_path
         expect(response.body).to include('<p>Here is a list of all users</p>')
-      end      
+      end
+    end
   end
-end
 end

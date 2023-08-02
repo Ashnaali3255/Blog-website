@@ -68,9 +68,9 @@ group :development do
 end
 
 group :test do
+  gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
-  gem 'rails-controller-testing'
 end
 
 gem 'rubocop', '>= 1.0', '< 2.0'
