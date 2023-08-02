@@ -1,4 +1,4 @@
-# Blog application
+# Blog Website
 
 <a name="readme-top"></a>
 
@@ -25,9 +25,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# [Blog application] <a name="about-project"></a>
+# [Blog Website] <a name="about-project"></a>
 
-**[Blog application]** The Blog app will be a classic example of a blog website. It is a functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts. It has been made by the following ERD diagram.
+**[Blog Website]** The Blog app will be a classic example of a blog website. It is a functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts. It has been made by the following ERD diagram.
 
 
 ![ER diagram image](https://github.com/BranBayou/blog-app/blob/crud/app/assets/images/blog_app_erd_v1_1.png)
@@ -47,10 +47,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Add Validation]**
-- **[Create Testing]**
-
-
+- **[Add Controllers]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -86,6 +83,7 @@ Install this project with:
 To run the project execute the following command:
 
 - rspec spec
+- rails routes
 
 ### Run tests
 
@@ -113,7 +111,9 @@ To run tests, run the following command:
 
 ## Future Features <a name="future-features"></a>
 
-- [ ] **[Decode different codes]**
+- [ ] **[Blog app - controllers specs]**
+- [ ] **[Blog app - views]**
+- [ ] **[Blog app - add forms]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
