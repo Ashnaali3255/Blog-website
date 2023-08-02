@@ -47,7 +47,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Add Controllers]**
+- **[Add Controllers Spec]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,7 +111,6 @@ To run tests, run the following command:
 
 ## Future Features <a name="future-features"></a>
 
-- [ ] **[Blog app - controllers specs]**
 - [ ] **[Blog app - views]**
 - [ ] **[Blog app - add forms]**
 

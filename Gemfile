@@ -70,6 +70,7 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem 'rails-controller-testing'
 end
 
 gem 'rubocop', '>= 1.0', '< 2.0'
