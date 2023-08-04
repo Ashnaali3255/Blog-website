@@ -1,1 +1,15 @@
-<h1>Here is post <%=@post_id %> by user <%=@user %></h1>
+<div class="recent-posts">
+  <p><%= @post.text %></p>
+  <p class="counters">comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
+
+  <% if @post.recent_comments.any? %>
+    <h3 class="comments-heading">Comments:</h3>
+    <ul class="comments-list">
+      <% @post.recent_comments.each do |comment| %>
+        <li>
+          <%= comment.user.name %> : <%= comment.text %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
