@@ -1,90 +1,90 @@
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-  }
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
 
-  h1 {
-    text-align: center;
-    margin-bottom: 30px;
-  }
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
 
-  .user {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    padding: 10px;
-  }
+.user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
 
-  .user .photo {
-    margin-right: 20px;
-    border: 2px solid #ddd;
-  }
+.user .photo {
+  margin-right: 20px;
+  border: 2px solid #ddd;
+}
 
-  .user .photo img {
-    border-radius: 50%;
-  }
+.user .photo img {
+  border-radius: 50%;
+}
 
-  .user-details h3 {
-    margin-top: 0;
-  }
+.user-details h3 {
+  margin-top: 0;
+}
 
-  .user-details .user-posts,
-  .counters {
-    color: #777;
-    margin-top: 5px;
-  }
+.user-details .user-posts,
+.counters {
+  color: #777;
+  margin-top: 5px;
+}
 
-  .bio-posts {
-    margin-top: 30px;
-  }
+.bio-posts {
+  margin-top: 30px;
+}
 
-  .p-bio {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 20px;
-  }
+.p-bio {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 20px;
+}
 
-  .recent-posts {
-    background-color: #f9f9f9;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-  }
+.recent-posts {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+}
 
-  .recent-posts p {
-    margin: 0;
-    padding: 0;
-  }
+.recent-posts p {
+  margin: 0;
+  padding: 0;
+}
 
-  .comments-heading {
-    margin-top: 15px;
-  }
+.comments-heading {
+  margin-top: 15px;
+}
 
-  .comments-list {
-    list-style-type: none;
-    padding-left: 0;
-    margin-top: 5px;
-  }
+.comments-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 5px;
+}
 
-  .comments-list li {
-    margin-bottom: 5px;
-  }
+.comments-list li {
+  margin-bottom: 5px;
+}
 
-  #show-more-btn {
-    display: block;
-    margin: 20px auto;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 16px;
-  }
+#show-more-btn {
+  display: block;
+  margin: 20px auto;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+}
 
-  #show-more-btn:hover {
-    background-color: #0056b3;
-  }
+#show-more-btn:hover {
+  background-color: #0056b3;
+}
