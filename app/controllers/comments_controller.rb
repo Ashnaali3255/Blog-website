@@ -1,32 +1,25 @@
 class CommentsController < ApplicationController
-    def new
-      @post = Post.find(params[:post_id])
-      @comment = Comment.new
-    end
-  
-    def create
-      @post = Post.find(params[:post_id])
-      @comment = current_user.comments.build(comment_params)
-      @comment.post = @post
-  
-      if @comment.save
-        update_comments_counter # Call the method to update comments_counter in the associated post.
-        redirect_to @post, notice: 'Comment was successfully added.'
-      else
-        render :new
-      end
-    end
-  
-    private
-  
-    def comment_params
-      params.require(:comment).permit(:content)
-    end
-  
-    # Method to update the comments_counter in the associated post.
-    def update_comments_counter
-      new_comments_count = @post.comments.count
-      @post.update(comments_counter: new_comments_count)
+  def new
+    @post = Post.find(params[:post_id])
+    @comment = Comment.new
+  end
+
+  def create
+    @user = User.find(params[:user_id])
+    @post = @user.posts.find(params[:post_id])
+    @comment = @post.comments.new(comment_params)
+    @comment.author_id = current_user.id
+
+    if @comment.save
+      redirect_to user_post_path(@user, @post), notice: 'Comment was successfully created.'
+    else
+      render :new
     end
   end
-  
+
+  private
+
+  def comment_params
+    params.require(:comment).permit(:text)
+  end
+end
