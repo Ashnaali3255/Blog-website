@@ -47,7 +47,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Blog app - views]**
+- **[Blog app - add forms]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,7 +111,7 @@ To run tests, run the following command:
 
 ## Future Features <a name="future-features"></a>
 
-- [ ] **[Blog app - add forms]**
+- [ ] **[Blog app ]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
