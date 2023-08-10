@@ -1,0 +1,18 @@
+require 'rails_helper'
+
+RSpec.describe 'User Index Page', type: :feature do
+  let!(:users) { create_list(:user, 3) }
+
+  it 'displays user information correctly' do
+    visit users_path
+
+    users.each do |user|
+      expect(page).to have_content(user.username)
+      expect(page).to have_selector("img[src$='#{user.profile_picture_url}']")
+      expect(page).to have_content("Posts: #{user.posts.count}")
+
+      click_link user.username
+      expect(current_path).to eq(user_path(user))
+    end
+  end
+end
