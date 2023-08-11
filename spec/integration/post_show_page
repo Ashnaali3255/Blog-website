@@ -1,0 +1,20 @@
+require 'rails_helper'
+
+RSpec.describe 'Post Show Page', type: :feature do
+  let!(:post) { create(:post_with_comments_and_likes) }
+
+  it 'displays post information and comments correctly' do
+    visit post_path(post)
+
+    expect(page).to have_content(post.title)
+    expect(page).to have_content("Author: #{post.author.username}")
+    expect(page).to have_content("Comments: #{post.comments.count}")
+    expect(page).to have_content("Likes: #{post.likes.count}")
+    expect(page).to have_content(post.body)
+
+    post.comments.each do |comment|
+      expect(page).to have_content(comment.user.username)
+      expect(page).to have_content(comment.content)
+    end
+  end
+end

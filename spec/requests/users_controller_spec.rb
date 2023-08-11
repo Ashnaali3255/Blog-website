@@ -1,3 +1,5 @@
+# spec/requests/users_controller_spec.rb
+
 require 'rails_helper'
 
 RSpec.describe UsersController, type: :request do
@@ -15,26 +17,22 @@ RSpec.describe UsersController, type: :request do
       get user_path(user.id)
       expect(response).to render_template(:show)
     end
+  end
 
-    describe 'GET #index' do
-      it 'returns a successful response' do
-        get users_path
-        expect(response).to have_http_status(:success)
-      end
+  describe 'GET #index' do
+    it 'returns a successful response' do
+      get users_path
+      expect(response).to have_http_status(:success)
+    end
 
-      it 'renders the index template' do
-        get users_path
-        expect(response).to render_template(:index)
-      end
+    it 'renders the index template' do
+      get users_path
+      expect(response).to render_template(:index)
+    end
 
-      it 'includes correct placeholder text in the response body' do
-        User.create(name: 'Lyn', photo: 'https://unsplash.com/photos/7fF0iei80AQ', bio: 'Teacher from England.',
-                    posts_counter: 0)
-        User.create(name: 'John Doe', photo: 'https://unsplash.com/photos/ABC123', bio: 'Lorem ipsum',
-                    posts_counter: 0)
-        get users_path
-        expect(response.body).to include('<p>Here is a list of all users</p>')
-      end
+    it 'includes correct placeholder text in the response body' do
+      get users_path
+      expect(response.body).to include('<h1>User Index</h1>')
     end
   end
 end

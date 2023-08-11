@@ -1,0 +1,38 @@
+require 'rails_helper'
+
+RSpec.describe 'User Post Index Page', type: :feature do
+  let!(:user) { create(:user_with_comments_and_likes) }
+
+  it 'displays user and post information correctly' do
+    visit user_posts_path(user)
+
+    expect(page).to have_content(user.username)
+    expect(page).to have_selector("img[src$='#{user.profile_picture_url}']")
+    expect(page).to have_content("Posts: #{user.posts.count}")
+
+    user.posts.each do |post|
+      expect(page).to have_content(post.title)
+      expect(page).to have_content(post.body[0..100])
+      expect(page).to have_content("Comments: #{post.comments.count}")
+      expect(page).to have_content("Likes: #{post.likes.count}")
+    end
+
+    click_link user.posts.first.title
+    expect(current_path).to eq(post_path(user.posts.first))
+  end
+end
+
+it 'displays the first comments on a post' do
+  visit user_posts_path(user)
+  post = user.posts.first
+  post.comments.first(3).each do |comment|
+    expect(page).to have_content(comment.content)
+  end
+end
+
+it 'displays a section for pagination if there are more posts' do
+  create_list(:post, 10, author: user)
+  visit user_posts_path(user)
+  expect(page).to have_css('.pagination')
+end
+end
