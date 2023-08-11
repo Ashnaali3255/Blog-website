@@ -21,3 +21,18 @@ RSpec.describe 'User Post Index Page', type: :feature do
     expect(current_path).to eq(post_path(user.posts.first))
   end
 end
+
+it 'displays the first comments on a post' do
+  visit user_posts_path(user)
+  post = user.posts.first
+  post.comments.first(3).each do |comment|
+    expect(page).to have_content(comment.content)
+  end
+end
+
+it 'displays a section for pagination if there are more posts' do
+  create_list(:post, 10, author: user)
+  visit user_posts_path(user)
+  expect(page).to have_css('.pagination')
+end
+end
