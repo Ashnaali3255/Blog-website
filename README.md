@@ -47,7 +47,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Blog app - add forms]**
+- **[Blog app - add devise]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,6 +103,12 @@ To run tests, run the following command:
 - GitHub: [@githubhandle](https://github.com/Ashnaali3255)
 - Twitter: [@twitterhandle](https://twitter.com/Ashna_Ali1)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ashna-ali-342151255/)
+
+👤 **Bilal Ahmed**
+
+- GitHub: [@bilalrajput09](https://github.com/bilalrajput09)
+- Twitter: [@bilal_rajput09](https://twitter.com/bilal_rajput09)
+- LinkedIn [Bilal Rajput](https://www.linkedin.com/in/bilal-ahmed-18b12019a/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
